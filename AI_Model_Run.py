@@ -1,6 +1,8 @@
 from ultralytics import YOLO
 import cv2 as cv2
 
+# CPS843 Fall 2025 - Wathaned Ean, Assad Kamal, Ivan Wang
+
 def run_model(model, video, output_video):
     model = model
     cap = cv2.VideoCapture(video)
@@ -48,4 +50,5 @@ def run_model(model, video, output_video):
     cv2.destroyAllWindows()
 
 # object detection
+
 run_model(model=YOLO('best.pt', "v12"), video=VIDEO_FILEPATH, output_video=OUTPUT_VIDEO_FILEPATH)
